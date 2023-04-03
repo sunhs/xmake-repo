@@ -1,9 +1,9 @@
 name: iPhoneOS
 
 on:
-  push:
+  pull_request:
     branches:
-      - test_ci
+      - dev
 
 jobs:
   build:

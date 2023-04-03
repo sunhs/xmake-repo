@@ -9,7 +9,7 @@ package("pulsar")
     add_deps("boost 1.81.0", "protobuf-cpp", "libcurl", "openssl", "zlib", "snappy")
 
     on_install("linux", function (package)
-        local configs = {"-DBUILD_TESTS=OFF"}
+        local configs = {"-DBUILD_TESTS=OFF", "-DHAS_ZSTD=0"}
         if package:config("shared") then
             configs = table.join(configs, {"-DBUILD_STATIC_LIB=OFF", "-DBUILD_DYNAMIC_LIB=ON"})
         else

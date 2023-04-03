@@ -1,9 +1,9 @@
 name: Wasm (Ubuntu)
 
 on:
-  pull_request:
+  push:
     branches:
-      - dev
+      - test_ci
 
 jobs:
   build:
